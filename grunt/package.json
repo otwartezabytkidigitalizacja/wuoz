@@ -1,0 +1,22 @@
+{
+  "name": "grunt-otwartezabytki",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-copy-to": "latest",
+    "grunt-fixmyjs": "latest",
+    "grunt-notify": "latest",
+    "grunt-phpcs": "latest",
+    "grunt-rm": "latest",
+    "grunt-sass": "latest",
+    "matchdep": "latest",
+    "grunt-wordpress-deploy" : "latest"
+  }
+}

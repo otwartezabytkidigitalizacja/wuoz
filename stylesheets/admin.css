@@ -1,0 +1,353 @@
+td.step-container {
+	width: 30px;
+}
+
+span.step {
+	background-color: #df2624;
+	border-radius: 11px;
+	margin-left: 5px;
+	margin-right: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+table.oz-admin-table td, table.oz-admin-table th {
+	line-height: 25px;
+}
+
+table.oz-admin-table th {
+	font-weight: bold;
+}
+
+.location-fields {
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
+}
+
+.location-map {
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+}
+
+/* theme options */
+
+#theme-options-accordion {
+	margin-top: 20px;
+}
+
+#theme-options-accordion .table-header {
+	border-bottom: 1px solid rgb(81, 114, 134);
+}
+
+h3.ui-accordion-header {
+	margin: 0;
+	background-color: rgb(81, 114, 134);
+	color: #ffffff;
+	padding: 3px 5px;
+	font-size: 12px;
+	outline: none;
+	margin-top: 1px;
+	cursor: pointer;
+}
+
+h3.ui-accordion-header .ui-accordion-header-icon {
+	padding-left: 21px;
+	background-image: url(../img/accordion-closed.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	min-height: 18px;
+}
+
+h3.ui-accordion-header-active {
+	outline: none;
+}
+
+h3.ui-accordion-header-active .ui-accordion-header-icon {
+	background-image: url(../img/accordion-open.png);
+}
+
+div.ui-accordion-content {
+	border: 1px solid rgb(81, 114, 134);
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#slides, #folder-icons {
+	border: 1px solid rgb(235, 235, 235);
+	padding: 10px;
+}
+
+#slides .slide {
+	background-color: rgb(235, 235, 235);
+	position: relative;
+	margin-bottom: 15px;
+	cursor: move;
+}
+
+#slides .slide:last-child {
+	margin-bottom: 0px;
+}
+
+#slides .slide .slide-text {
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	padding: 10px;
+}
+
+#slides .slide .slide-list {
+	display: inline-block;
+	width: 45%;
+	padding: 10px;
+	vertical-align: top;
+}
+
+#slides .slide .slide-list ul {
+	list-style-type: circle;
+	margin-top: 0px;
+}
+
+#slides .slide .delete, #folder-icons .folder-icon .delete {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 25px;
+	height: 25px;
+	background-color: #df2624;
+	background-image: url(../img/admin-delete.png);
+	cursor: pointer;
+}
+
+#add-folder-icon {
+	width: 135px;
+	height: 100px;
+	background-image: url(../img/add_folder_icon.png);
+	background-size: 135px;
+	border: 1px solid rgb(81, 114, 134);
+	cursor: pointer;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.folder-icon {
+	width: 135px;
+	height: 100px;
+	background-size: cover;
+	border: 1px solid rgb(81, 114, 134);
+	margin-bottom: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+table.folder-table {
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+table.folder-table th {
+	background-color: rgb(81, 114, 134);
+	color: #ffffff;
+	font-weight: normal;
+	padding: 3px;
+
+}
+
+table.folder-table th:nth-child(2) {
+	text-align: left;
+}
+
+table.folder-table td {
+	width: 40px;
+	border-bottom: 1px solid rgb(81, 114, 134);
+	margin: 0;
+	text-align: center;
+	padding: 3px;
+}
+
+table.folder-table td:first-child {
+	width: 20px;
+	border: none;
+}
+
+table.folder-table td:nth-child(2) {
+	width: 200px;
+	text-align: left;
+}
+
+table.folder-table tr:last-child td {
+	border: none;
+}
+
+table.folder-table .spinner {
+	margin: 0px auto;
+	float: none;
+	display: block;
+}
+
+#documents-info {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 300px;
+	margin-left: -158px;
+	background-color: #ffffff;
+	padding: 16px;
+	border: dotted 1px rgb(81, 114, 134);
+	b-webkit-box-shadow: 0px 0px 16px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 16px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 16px rgba(50, 50, 50, 0.75);
+	display: none;
+	max-height: 50%;
+	overflow: scroll;
+}
+
+#documents-info .step {
+	margin-left: 0px;
+}
+
+.connect {
+	border: 1px solid #df2624;
+	padding: 3px 5px;
+	display: inline;
+	cursor: pointer;
+	color: #df2624;
+	float: right;
+	background-color: #ffffff;
+}
+
+#connected-documents .doc {
+	border: 1px solid rgb(81, 114, 134);
+	display: inline-block;
+	padding: 3px 5px;
+	margin: 4px 5px;
+	height: 40px;
+	overflow: hidden;
+	max-width: 200px;
+	padding-right: 22px;
+	background-color: #fcfcfc;
+	vertical-align: top;
+	position: relative;
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+}
+
+#connected-documents .doc .delete-doc {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	color: #df2624;
+	border: 1px solid rgb(81, 114, 134);
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.oz-error {
+	border: 1px solid #df2624;
+	margin-bottom: 10px;
+}
+
+.oz-error .oz-error-header {
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #df2624;
+	color: #ffffff;
+	padding: 2px 5px;
+}
+
+input.document-metadata, textarea.document-metadata {
+	width: 100%;
+}
+
+#jpeg-list {
+	width: 100%;
+}
+
+.jpeg {
+	height: 120px;
+	border: 1px solid rgb(81, 114, 134);
+	padding: 5px;
+	margin: 5px;
+	background-color: #ffffff;
+	float: left;
+	cursor: move;
+	position: relative;
+}
+
+.jpeg img {
+	max-height: 120px;
+	width: auto;
+	padding-right: 25px;
+}
+
+.jpeg .post-edit-link {
+	position: absolute;
+	top: 24px;
+	right: -1px;
+	width: 25px;
+	height: 25px;
+	background-color: rgb(81,114,134);
+	background-image: url(../img/admin-edit.png);
+	cursor: pointer;
+}
+
+.jpeg .delete {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 25px;
+	height: 25px;
+	background-color: #df2624;
+	background-image: url(../img/admin-delete.png);
+	cursor: pointer;
+}
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+#pdf-list, #djvu-list {
+	min-height: 20px;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+
+.login h1 a {
+	background-image: url(../svg/oz_logo.svg);
+}
+
+.login p#nav {
+	display: none;
+}

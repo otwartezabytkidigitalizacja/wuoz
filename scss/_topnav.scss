@@ -1,0 +1,248 @@
+$in-logo-mg : 40px;
+
+#header-menu {
+	@media (max-width: 767px) {
+		position: relative;
+	}
+}
+.first-top-container {
+	@media (max-width: 767px ) {
+		margin-top: 0 !important;
+	}
+}
+nav.top-bar {
+	min-height: 135px;
+	border-bottom: 1px solid $dark-green;
+	.oz-button.dark-green-bg, .login-cnt {
+		margin-top: $in-logo-mg;
+		@media (max-width: 767px) {
+			margin-top: 1em;
+			padding: 0;
+		}
+	}
+	#searchword {
+		float: left;
+		width: 100%;
+		top: 0px;
+		border: 0px;
+		max-height: 26px;
+		outline: 0;
+	}
+	#header-search.searchpage {
+		padding-left: 0px;
+		padding-right: 52px;
+		border: 1px solid $dark-green;
+		span.has-tip {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			float: left;
+		}
+		span {
+			cursor: pointer;
+			background-color: $dark-green;
+			border: 0px;
+		}
+		background: transparent;
+	}
+	.login-cnt.logged {
+		margin-top: em-calc(18);
+		float: right;
+		.ta-right {
+			margin-top: 0;
+			margin-bottom: em-calc(3);
+		}
+	}
+	.log-cnt {
+		padding-left: 0;
+	}
+	a {
+		margin-bottom: 1em;
+	}
+	.search-ico {
+		border-left: 1px solid #FFF;
+		width: 32px;
+		height: 30px;
+		position: absolute;
+		left: auto;
+		right: 0px;
+		top: auto;
+	}
+	.login-cnt {
+		.oz-button{
+			border: 1px solid $dark-green;
+			padding-right: 0em;
+		}
+		.oz-button.first-btn{
+			margin-right: 3px;
+		}
+		.oz-button:hover{
+			color: $success-color;
+		}
+		.oz-button .ico {
+			border-left: 1px solid $primary-color;
+			margin-left: 1.25em;
+			width: 30px;
+			height: 100%;
+		}
+	}
+	.row {
+		max-width: 100em;
+	}
+}
+#top-right {
+	ul.inline-list li {
+		margin-left: 3px;
+	}
+	.button-group.right {
+		min-width: 300px;
+	}
+	li a {
+		@extend .caps;
+		border: 1px solid $light-grey;
+		border-top: 0px;
+		color: $top-nav-a;
+		padding: 0 em-calc(28);
+		font-size: $top-right-fs;
+		line-height: em-calc(28);
+		height: 30px;
+		color: $light-grey;
+	}
+	li:first-child a {
+		padding: 0 em-calc(16);
+	}
+	li:hover a{
+		color: $dark-grey;
+
+	}
+	ul.social {
+		margin-left: 0;
+	}
+	ul.social li a {
+		@extend .low-case;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		background: $dark-grey;
+		border: none;
+		text-align: center;
+		color: #fff;
+	}
+	ul.social li:hover a {
+		border: none;
+		background: $light-grey;
+		color: $dark-grey;
+
+	}
+	@media (max-width: 767px) {
+		padding:0 ;
+	}
+}
+
+#login-popup, #register-popup, #addfolder-reveal, #settings-reveal {
+	form {
+		padding: 2.5em;
+	}
+	input[type=text], input[type=password], input[type=email] {
+		background-color: #ecebeb;
+		color: $body-font-color;
+		text-align: center;
+		border: none;
+		width: 100%;
+		height: em-calc(30);
+	}
+	input[type=submit] {
+		visibility: hidden;
+	}
+	.wp-submit {
+		@extend .caps;
+		border: 1px solid #517286;
+		display: block;
+		height: 32px;
+		line-height: 30px;
+		text-align: center;
+		.go-ico {
+			height: 30px;
+			border-left: 1px solid #517286;
+			width: 30px;
+			margin-right: -10px;
+		}
+	}
+	p .error {
+		display: none;
+		width: 100%;
+		font-size: 0.9em;
+		background-color: $monument-color;
+		color: #fff;
+		padding: 0 1em;
+		text-align: center;
+	}
+	p.error>.error {
+		display: block;
+	}
+	#wp-social-login-connect-options {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	#wp-social-login-connect-options a {
+	@extend .low-case;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		background: $dark-grey;
+		border: none;
+		text-align: center;
+		color: #fff;
+		line-height: 30px;
+		font-size: 1em;
+		margin-right: 1em;
+		margin-bottom: 1em;
+	}
+	p.login-remember {
+		margin-bottom: 1em;
+	}
+	p.login-submit {
+		margin-bottom: 0em;
+		line-height: 1em;
+	}
+	#wp-social-login-connect-options a:hover {
+			border: none;
+			background: $light-grey;
+			color: $dark-grey;
+	}
+	p.social-login-caption {
+		@extend .caps;
+		color: $primary-color;
+		font-size: 1.1em;
+		text-align: center;
+		margin-bottom: 0.8em;
+	}
+	.set-value {
+		color: $dark-green;
+		line-height: 1.4em;
+	}
+	.set-label {
+		line-height: 1.4em;
+		@media (max-width: 768px) {
+			text-align: right;
+
+		}
+	}
+	.set-cnt {
+		line-height: 2em;
+		margin-bottom: 5px;
+	}
+	.row.wp-submit {
+		margin-top: em-calc(20);
+	}
+	.pass-cnt {
+		margin-bottom: 0.5em;
+	}
+	.info-cnt .row {
+		border-bottom: 1px dotted $light-grey;
+		padding-bottom: em-calc(5);
+	}
+}

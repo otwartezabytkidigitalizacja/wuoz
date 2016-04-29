@@ -1,0 +1,77 @@
+// maps css
+.gmnoprint img { max-width: none !important; }
+
+#home-map-container, #page-map-container {
+	position: relative;
+
+	#home-map-shadow {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 25px;
+		width: 100%;
+		background-image: url(../img/map_shadow.png);
+		z-index: 98;
+		pointer-events:none;
+	}
+
+	.cluster {
+		width: 25px;
+		padding-top: 25px;
+		text-align: center;
+		color: #ffffff;
+		background-color: $monument-color;
+		background-image: url(../img/cluster.png);
+		background-repeat: no-repeat;
+		background-position: top;
+		padding-bottom: 3px;
+		font-weight: bold;
+	}
+
+	.map-ovr {
+		@include border-radius($global_radius);
+		margin-bottom: 2.5em;
+		border: 1px solid $monument-color;
+		border-top-width: 2px;
+		background-color: #ffffff;
+		min-width: 200px;
+		cursor: auto;
+		margin-left: 10px;
+		height: 200px;
+		overflow-x: hidden;
+
+		h4.label {
+			min-height: em-calc(50);
+			top: 0px;
+			width: 100%;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			padding: 0;
+			margin: 0;
+			font-size: em-calc(13);
+			padding-left: em-calc(40);
+			background-position: 0px;
+			padding-top: em-calc(8);
+			padding-right: em-calc(10);
+			@extend .mon-ico;
+		}
+
+		div.ovr-content {
+			padding-top: em-calc(8);
+			padding-right: em-calc(10);
+			padding-left: em-calc(10);
+			padding-bottom: em-calc(8);
+		}
+
+		.ovr-button-container {
+			text-align: right;
+			a {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background: url(../svg/map_arrow.svg) no-repeat;
+				margin-bottom: em-calc(8);
+			}
+		}
+	}
+}

@@ -1,0 +1,603 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+ @import "foundation/components/global"; // *always required
+ @import "foundation/components/grid";
+
+//
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+// @import "foundation/components/grid-5";
+//
+
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+@import "foundation/components/type";
+//@import "foundation/components/buttons";
+//@import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+@import "foundation/components/flex-video";
+// @import "foundation/components/section";
+@import "foundation/components/top-bar";  // *requires components/grid
+@import "foundation/components/orbit";
+@import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+@import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+/* Custom CSS for Otwarte Zabytki 2013 */
+
+
+/*
+ 
+ Foundation settings altered:
+
+ $primary-color: #517286; / dark-green
+ $secondary-color: #888687; / dark-grey
+ $alert-color: #df2624;  / monument-color
+ $success-color: #36a496; / document-color
+
+ */
+
+//debug stuff
+
+pre {
+	position: fixed;
+	top: 0px;
+	z-index: 9999;
+	background: #517286;
+}
+
+
+// Helpers Color Definition
+
+$top-nav-a:  #656263;
+$light-grey: #b4b3b3;
+$dark-green: #517286; 
+$dark-grey: #888687; 
+$monument-color: #df2624;  
+$document-color: #36a496;  
+
+// Mixinx 
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// Font Size
+
+$top-right-fs: em-calc(12);
+
+
+// main tags
+
+
+$ts-time: 0.5s;
+
+a {
+	-webkit-transition: all ease-out $ts-time;
+	-moz-transition: all ease-out $ts-time;
+	-o-transition: all ease-out $ts-time;
+	-ms-transition: all ease-out $ts-time;
+	transition: all ease-out $ts-time;
+}
+::-webkit-input-placeholder {
+	color: $dark-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: $dark-grey;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $dark-grey;
+}
+:-ms-input-placeholder {  
+	color: $dark-grey;
+}
+
+//general classes
+.caps {
+	text-transform: uppercase;
+}
+.low-case {
+	text-transform: lowercase;
+}
+.ico {
+	display: inline-block;
+}
+.oz-button {
+	@extend .caps;
+	display: inline-block;
+	padding: 0 em-calc(15);
+	line-height: em-calc(28);
+	height: 30px;
+	-webkit-transition: all ease-out $ts-time;
+	-moz-transition: all ease-out $ts-time;
+	-o-transition: all ease-out $ts-time;
+	-ms-transition: all ease-out $ts-time;
+	transition: all ease-out $ts-time;
+	text-align: center;
+}
+
+.dark-green-bg {
+	background: $dark-green;
+	color: #fff;
+}
+.dark-green-bg:hover {
+	background: $success-color;
+	color: #fff;
+}
+.srv-msg {
+	color: $alert-color;
+}
+.srv-msg.success {
+	color: $success-color;
+}
+#logo {
+	background: url(../svg/oz_logo.svg);
+	width: 180px;
+	height: 80px;
+	display: inline-block;
+}
+
+// ico classes
+.search-ico {
+	background-image: url(../svg/search_ico.svg);
+}
+.login-ico {
+	background-image: url(../svg/login_ico.svg);
+}
+.mycats-ico {
+	background: url(../svg/mycats_ico.svg);
+}
+.set-ico {
+	background: url(../svg/set_ico.svg);
+}
+.mon-ico {
+	background-image: url(../svg/mon_ico.svg);
+}
+.doc-ico {
+	background-image: url(../svg/doc_ico.svg);
+}
+.o-footer-ico {
+	background-image: url(../svg/otwarte_footer_logo.svg);
+}
+.cc-footer-ico {
+	background-image: url(../img/cc_footer_logo.png);
+}
+.nck-footer-ico {
+	background-image: url(../svg/nck_footer_logo.svg);
+}
+.go-ico {
+	background-image: url(../svg/go_ico.svg);
+}
+.close-reveal-modal{
+	background-image: url(../svg/close_popup.svg);
+	width: 30px;
+	height: 30px;
+}
+$in-logo-mg : 40px;
+nav.top-bar {
+	min-height: 135px;
+	.oz-button.dark-green-bg, .login-cnt {
+		margin-top: $in-logo-mg;
+		@media (max-width: 767px) {
+			margin-top: 1em;
+			padding: 0;
+		}
+	}
+	.log-cnt {
+		padding-left: 0;
+	}
+	.search-ico {
+		border-left: 1px solid #FFF;
+		width: 32px;
+		height: 30px;
+		position: absolute;
+		left: auto;
+		right: 0px;
+		top: auto;
+	}
+	.login-cnt { 
+		.oz-button{
+			border: 1px solid $dark-green;
+			padding-right: 0em;
+		}
+		.oz-button:first-child{
+			margin-left: 3px;
+		}
+		.oz-button:hover{
+			color: $success-color;
+		}
+		.oz-button .ico {
+			border-left: 1px solid $primary-color;
+			margin-left: 1.25em;
+			width: 30px;
+			height: 100%;
+		}
+	}
+	.row {
+		max-width: 100em;
+	}
+}
+.reveal-modal.small {
+	@media (min-width: 768px) {
+		width: 30%;
+		margin-left: -15%;
+	}
+}
+.reveal-modal-bg {
+	z-index: 99;
+}
+#top-right {
+	ul.inline-list li {
+		margin-left: 3px;
+	}
+	li a {
+		@extend .caps;
+		border: 1px solid $light-grey;
+		border-top: 0px solid #fff;
+		color: $top-nav-a;
+		padding: 0 em-calc(28);
+		font-size: $top-right-fs;
+		line-height: em-calc(28);
+		height: 30px;
+		color: $light-grey;
+	}
+	li:first-child a {
+		padding: 0 em-calc(16);
+	}
+	li:hover a{
+		color: $dark-grey;
+
+	}
+	ul.social {
+		margin-left: 0;
+	}
+	ul.social li a {
+		@extend .low-case;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		background: $dark-grey;
+		border: none;
+		text-align: center;
+		color: #fff;
+	}
+	ul.social li:hover a {
+		border: none;
+		background: $light-grey;
+		color: $dark-grey;
+
+	}
+	@media (max-width: 767px) {
+		padding:0 ;	
+	}
+}
+#login-popup, #registerform {
+	form {
+		padding: 2.5em;
+	}
+	input[type=text], input[type=password], input[type=email] {
+		background-color: #ecebeb;
+		color: $body-font-color;
+		text-align: center;
+		border: none;
+		width: 100%;
+		height: em-calc(30);
+	}
+	input[type=submit] {
+		visibility: hidden;
+	}
+	.wp-submit {
+		@extend .caps;
+		border: 1px solid #517286;
+		display: block;
+		height: 32px;
+		line-height: 30px;
+		text-align: center;
+		.go-ico {
+			height: 30px;
+			border-left: 1px solid #517286;
+			width: 30px;
+			margin-right: -10px;
+		}
+	}
+	p .error {
+		display: none;
+		width: 100%;
+		font-size: 0.9em;
+		background-color: $monument-color;
+		color: #fff;
+		padding: 0 1em;
+		text-align: center;
+	}
+	p.error>.error {
+		display: block;
+	}
+}
+section#slider {
+	background: url(../svg/slider_bg.svg) center center;
+	background-size: 1920px 560px;
+	height: 560px;
+	margin-bottom: 1em;
+	@media (max-width: 767px) {
+		height: auto;
+		margin-bottom: 2em;
+	}
+	.orbit-container .orbit-slide-number, .orbit-bullets {
+		display: none;
+	}
+	h6, ul li {
+		color: #fff;
+		font-weight: 300;
+	}
+	ul ul.right {
+		list-style: square outside none;
+		padding-left: 0;
+	}
+	.orbit-container {
+		overflow: visible;
+		min-height: 60px;
+		>ul {
+			overflow: hidden;
+			margin: 0 em-calc(35);
+			padding: 0 em-calc(35);
+		}
+		.orbit-prev, .orbit-next {
+			width: 30px;
+			height: 30px;
+			span {
+				border:none;
+			}
+		}
+		.orbit-prev {
+			background: url(../svg/slider_left_ar.svg) no-repeat;
+		}
+		.orbit-next {
+			background: url(../svg/slider_right_ar.svg) no-repeat;
+		}
+	}
+	#slider-center-wrapper {
+		margin-top: 10em;
+	}
+	.slider-video-cnt {		
+		width: 100%;
+		margin-top: 4em;
+		img {
+			margin: 0 auto;
+			display: block;
+			cursor: pointer;
+		}
+	}
+}
+body.home {
+	#header-search {
+		display: none;
+	}
+}
+#home-search {
+	height: em-calc(160);
+	border-bottom: 1px solid $primary-color;
+	margin-bottom: em-calc(46);
+	.oz-button {
+		display: block;
+	}
+	
+}
+#recent-label {
+	h3 {
+		font-size: em-calc(13);
+	}
+	.mon-ico, .doc-ico {
+		background-size: 30px 30px;
+		width: 30px;
+		height: 30px;
+		background-position: -6px 4px;
+		background-repeat: no-repeat;
+	}
+}
+.objects-cnt {
+	margin-bottom: 3em;
+	>div.document > div.single-thumb, >div.monument > div.single-thumb {
+		border-top-width: 2px;
+		display: block;
+		position: relative;
+		margin-bottom: 2.5em;
+		@include border-radius($global_radius);
+	}
+	>div.document .single-thumb {
+		border: 1px solid $document-color;
+	}
+	>div.monument .single-thumb {
+		border: 1px solid $monument-color;
+	}
+	>div .single-thumb img {
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	>div h4.label {
+		position: absolute;
+		min-height: em-calc(50);
+		top: 0px;
+		width: 100%;
+		background-color: #fff;
+		background-repeat: no-repeat;
+		padding: 0;
+		margin: 0;
+		font-size: em-calc(13);
+		padding-left: em-calc(40);
+		background-position: 0px;
+		padding-top: em-calc(8);
+		padding-right: em-calc(10);
+	}
+	>div.document h4.label {
+		@extend .doc-ico;
+	}
+	>div.monument h4.label {
+		@extend .mon-ico;
+	}
+}
+footer {
+	border-top: 1px solid $primary-color;
+	hr {
+		border-top: 1px solid $primary-color;
+		height: 1px;
+		line-height: 1px;
+		margin: 0;
+	}
+	p {
+		line-height: 1.2em;
+		font-size: em-calc(10);
+	}
+	.copy, .attributions {
+		padding-top:em-calc(45);
+	}
+	.copy {
+		@media (min-width: 768px) {
+			border-right: 1px solid $primary-color;
+		}
+		@media (max-width: 767px) {
+			border-bottom: 1px solid $primary-color;	
+		}
+	}
+	.attributions {
+		p {
+			margin-bottom: 1em;
+		}
+		.large-4 {
+			padding: 0;
+			margin-bottom: 1em;
+		}
+		.large-8 {
+			padding-right: 0;
+			margin-bottom: 1em;
+		}
+	}
+	.ico {
+		height: 30px;
+		margin-bottom: 1em;
+	}
+	.o-footer-ico {
+		width: 140px;
+	}
+	.cc-footer-ico {
+		width: 90px;
+		margin-left: 1em;
+	}
+	.nck-footer-ico {
+		width: 70px;
+		margin-right: 2em;
+	}
+}
+	#cc-authors-atts{
+		span.caps {
+			line-height: em-calc(30);
+			color: $dark-grey;
+			vertical-align: top;
+		}
+	}
+<<<<<<< HEAD
+#video-reveal {
+	padding: 4em;
+}
+=======
+
+
+//maps
+>>>>>>> da0a4bc7fe182125ddd89dd7f20d96e1dd9a881a
+.gmnoprint img { max-width: none !important; }
+
+#home-map {
+	.cluster {
+		width: 25px;
+		padding-top: 25px;
+		text-align: center;
+		color: #ffffff;
+		background-color: $monument-color;
+		background-image: url(../img/cluster.png);
+		background-repeat: no-repeat;
+		background-position: top;
+		padding-bottom: 3px;
+		font-weight: bold;
+	}
+
+	.map-ovr {
+		@include border-radius($global_radius);
+		margin-bottom: 2.5em;
+		border: 1px solid $monument-color;
+		border-top-width: 2px;
+		background-color: #ffffff;
+		min-width: 200px;
+		cursor: auto;
+		margin-left: 10px;
+
+		h4.label {
+			min-height: em-calc(50);
+			top: 0px;
+			width: 100%;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			padding: 0;
+			margin: 0;
+			font-size: em-calc(13);
+			padding-left: em-calc(40);
+			background-position: 0px;
+			padding-top: em-calc(8);
+			padding-right: em-calc(10);
+			@extend .mon-ico;
+		}
+
+		div.ovr-content {
+			padding-top: em-calc(8);
+			padding-right: em-calc(10);
+			padding-left: em-calc(10);
+			padding-bottom: em-calc(8);
+		}
+
+		.ovr-button-container {
+			text-align: right;
+			a {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background: url(../svg/map_arrow.svg) no-repeat;
+				margin-bottom: em-calc(8);			
+			}
+		}
+	}
+}

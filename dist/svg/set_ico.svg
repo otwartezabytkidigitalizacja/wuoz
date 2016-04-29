@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30"
+   height="30"
+   id="svg8453"
+   version="1.1"
+   inkscape:version="0.48+devel r"
+   viewBox="0 0 30 30"
+   sodipodi:docname="set_ico.svg"
+   inkscape:export-filename="/opt/lampp/htdocs/otwarte/add-ons/themes/otwartezabytki2013/img/mycats_ico.png"
+   inkscape:export-xdpi="90.017723"
+   inkscape:export-ydpi="90.017723">
+  <defs
+     id="defs8455" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="5.194815"
+     inkscape:cy="1.7141438"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1030"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8458">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1022.3622)">
+    <path
+       d="m 22.883576,1034.6385 c -0.19,-0.785 -0.49875,-1.52 -0.90875,-2.19 l 0.91625,-0.9162 -2.56625,-2.5663 -0.915,0.9163 c -0.67125,-0.41 -1.40625,-0.7188 -2.19125,-0.9088 l 0,-1.2937 -3.6275,0 -0.0013,1.2937 c -0.78375,0.19 -1.52,0.5 -2.19,0.9088 l -0.91625,-0.915 -2.5649997,2.565 0.91625,0.9162 c -0.41,0.67 -0.72,1.405 -0.90875,2.19 l -1.29375,0 0,3.6288 1.29375,0 c 0.19,0.785 0.49875,1.52 0.9075,2.19 l -0.915,0.9162 2.5662497,2.565 0.915,-0.915 c 0.67,0.4088 1.40625,0.7175 2.19125,0.9075 l 0,1.2938 3.6275,0 0,-1.2938 c 0.785,-0.1912 1.52125,-0.5 2.19125,-0.9087 l 0.915,0.915 2.56625,-2.565 -0.91625,-0.9163 c 0.41,-0.67 0.71875,-1.4062 0.90875,-2.19 l 1.29375,0 0,-3.6287 -1.29375,0 z m -3.775,1.8138 c 0,2.0462 -1.65875,3.7037 -3.70375,3.7037 -2.045,0 -3.70375,-1.6575 -3.70375,-3.7037 0,-2.045 1.65875,-3.7025 3.70375,-3.7025 2.045,0 3.70375,1.6575 3.70375,3.7025 z"
+       style="fill:none;stroke:#517286;stroke-width:0.9375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path12419"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

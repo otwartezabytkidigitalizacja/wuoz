@@ -1,0 +1,64 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin border-radius-folder-top($radius){
+-webkit-border-top-left-radius: $radius;
+-webkit-border-top-right-radius: $radius;
+-moz-border-radius-topleft: $radius;
+-moz-border-radius-topright: $radius;
+border-top-left-radius: $radius;
+border-top-right-radius: $radius;
+}
+
+@mixin border-radius-folder ($radius) {
+-webkit-border-radius: $radius;
+-webkit-border-top-right-radius: 0;
+-moz-border-radius: $radius;
+-moz-border-radius-topright: 0;
+border-radius: $radius;
+border-top-right-radius: 0;
+}
+
+$ts-time: 0.5s;
+@mixin transition($values) {
+	-webkit-transition: $values;
+	-moz-transition: $values;
+	-o-transition: $values;
+	-ms-transition: $values;
+	transition: $values;
+}
+@mixin transition-two($values, $values2) {
+	-webkit-transition: $values, $values2;
+	-moz-transition: $values, $values2;
+	-o-transition: $values, $values2;
+	-ms-transition: $values, $values2;
+	transition: $values, $values2;
+}
+
+@mixin rotate( $degrees ) {
+  -webkit-transform: rotate(#{$degrees}deg);
+  -moz-transform: rotate(#{$degrees}deg);
+  -ms-transform: rotate(#{$degrees}deg);
+  -o-transform: rotate(#{$degrees}deg);
+  transform: rotate(#{$degrees}deg);
+
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+  zoom: 1;
+ }
+
+ @mixin box-shadow ($horizontal, $vertical, $blur, $spread, $color) {
+  -moz-box-shadow:    $horizontal $vertical $blur $spread $color;
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+  box-shadow:         $horizontal $vertical $blur $spread $color;
+ }
+ @mixin box-shadow-inset ($horizontal, $vertical, $blur, $spread, $color) {
+  -moz-box-shadow:    inset $horizontal $vertical $blur $spread $color;
+  -webkit-box-shadow: inset $horizontal $vertical $blur $spread $color;
+  box-shadow:         inset $horizontal $vertical $blur $spread $color;
+ }

@@ -1,0 +1,515 @@
+// Font Size
+
+$top-right-fs: em-calc(12);
+body {
+	@media (min-width: 768px) {
+		padding-top: 136px;	
+	}
+}
+// main tags
+
+a {
+	@include transition(all ease-out $ts-time);
+}
+
+::-webkit-input-placeholder {
+	color: $dark-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: $dark-grey;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $dark-grey;
+}
+:-ms-input-placeholder {  
+	color: $dark-grey;
+}
+
+//general classes
+.caps {
+	text-transform: uppercase;
+}
+.low-case {
+	text-transform: lowercase;
+}
+.ico {
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.ta-right {
+	text-align: right;
+}
+.ta-left {
+	text-align: left;
+}
+.ta-center {
+	text-align: center;
+}
+.oz-button {
+	@extend .caps;
+	@include transition(all ease-out $ts-time);  
+	display: inline-block;
+	padding: 0 em-calc(15);
+	line-height: em-calc(28);
+	height: 30px;
+	text-align: center;
+}
+.bold {
+	font-weight: 700;
+}
+.dark-green-bg {
+	background: $dark-green;
+	color: #fff;
+}
+.dark-green-bg:hover {
+	background: $success-color;
+	color: #fff;
+}
+.srv-msg {
+	color: $success-color;
+	padding: 0 2.5em;
+}
+.srv-msg.success {
+	color: $success-color;
+}
+#logo {
+	@extend .ico;
+	background-image: url(../svg/oz_logo.svg);
+	width: 180px;
+	height: 80px;
+	display: inline-block;
+}
+.reveal-modal.small {
+	@media (min-width: 1200px) {
+		width: 30%;
+		margin-left: -15%;
+	}
+	@media (min-width: 768px) and (max-width: 1200px) {
+		width: 50%;
+		margin-left: -25%;
+	}
+}
+.reveal-modal-bg {
+	z-index: 99;
+}
+.close-reveal-modal{
+	@extend .ex-ico;
+	width: 30px;
+	height: 30px;
+}
+
+// Main Objects Grid
+.objects-cnt {
+	margin-bottom: 3em;
+	>div.document > div.single-thumb, >div.monument > div.single-thumb {
+		border-top-width: 2px;
+		display: block;
+		position: relative;
+		margin-bottom: 2.5em;
+		@include border-radius($global_radius);
+		&:hover {
+			h4.label {
+				@include transition(all ease-out 500ms);
+				height: 100%;
+				opacity: 0.85;
+			}	
+		}
+	}
+	>div.document .single-thumb {
+		border: 1px solid $document-color;
+	}
+	>div.monument .single-thumb {
+		border: 1px solid $monument-color;
+	}
+	>div .single-thumb img {
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	>div h4.label {
+		position: absolute;
+		min-height: em-calc(54);
+		height: 54px;
+		top: 0px;
+		width: 100%;
+		background-color: #fff;
+		background-repeat: no-repeat;
+		padding: 0;
+		margin: 0;
+		font-size: em-calc(13);
+		padding-left: em-calc(40);
+		background-position: 0px 6px;
+		padding-top: em-calc(8);
+		padding-right: em-calc(15);
+		overflow: hidden;
+		@include transition(all ease-out 300ms);
+		span.title-text {
+			position: relative;
+			float: left;
+			top: 0px;
+			padding-right: em-calc(15);			
+		}
+		span.gradient-text {
+			@include background-image(linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%));
+			position: absolute;
+			bottom: 0px;
+			top: auto;
+			width: 100%;
+			height: 15px;
+			left: 0px;
+		}
+	}
+	>div.document h4.label {
+		@extend .doc-ico;
+	}
+	>div.monument h4.label {
+		@extend .mon-ico;
+	}
+
+	>div.document {
+		&.fotografia {
+			h4.label {
+				@extend .pics;
+			}
+		}
+		&.karta-biala {
+			h4.label {
+				@extend .white-card;
+			}
+		}
+		&.karta-zielona {
+			h4.label {
+				@extend .green-card;
+			}
+		}
+		&.rysunek-techniczny {
+			h4.label {
+				@extend .white-card;
+			}
+		}
+		&.rysunek-techniczny {
+			h4.label {
+				@extend .techs;
+			}
+		}
+		&.tekst {
+			h4.label {
+				@extend .science;
+			}
+		}
+	}
+
+	>div.monument {
+		&.architektura-inzynieryjna {
+			h4.label{
+				@extend .engineer;
+			}	
+		}
+		&.budynek-cmentarny {
+			h4.label{
+				@extend .cementary;
+			}	
+		}
+		&.budynek-dworskipalaczamek {
+			h4.label{
+				@extend .willa;
+			}	
+		}
+		&.budynek-gospodarczy {
+			h4.label{
+				@extend .hut;
+			}	
+		}
+		&.budynek-mieszkalny {
+			h4.label{
+				@extend .house;
+			}	
+		}
+		&.budynek-militarny {
+			h4.label{
+				@extend .military;
+			}	
+		}
+		&.budynek-przemyslowy {
+			h4.label{
+				@extend .industry;
+			}	
+		}
+		&.budynek-sakralny {
+			h4.label{
+				@extend .sacred;
+			}	
+		}
+		&.budynek-sportowykulturalnyedukacyjny {
+			h4.label{
+				@extend .sports;
+			}	
+		}
+		&.budynek-uzytecznosci-publicznej {
+			h4.label{
+				@extend .public;
+			}	
+		}
+		&.mala-architektura {
+			h4.label{
+				@extend .architecture_small;
+			}	
+		}
+		&.parkogrod {
+			h4.label{
+				@extend .park_place;
+			}	
+		}
+		&.uklad-urbanistycznyzespol-budowlany {
+			h4.label{
+				@extend .urban;
+			}	
+		}
+	}
+
+	[class*="column"] + [class*="column"]:last-child {
+		float: left;
+	}
+	.row {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+footer {
+	border-top: 1px solid $primary-color;
+	hr {
+		border-top: 1px solid $primary-color;
+		height: 1px;
+		line-height: 1px;
+		margin: 0;
+	}
+	p {
+		line-height: 1.2em;
+		font-size: em-calc(10);
+	}
+	.copy, .attributions {
+		padding-top:em-calc(45);
+	}
+	.copy {
+		@media (min-width: 768px) {
+			border-right: 1px solid $primary-color;
+		}
+		@media (max-width: 767px) {
+			border-bottom: 1px solid $primary-color;	
+		}
+	}
+	.attributions {
+		p {
+			margin-bottom: 1em;
+		}
+		.large-4 {
+			padding: 0;
+			margin-bottom: 1em;
+		}
+		.large-8 {
+			padding-right: 0;
+			margin-bottom: 1em;
+		}
+	}
+	.ico {
+		height: 30px;
+		margin-bottom: 1em;
+	}
+	.o-footer-ico {
+		width: 140px;
+	}
+	.cc-footer-ico {
+		width: 90px;
+		margin-left: 1em;
+		margin-right: 2em;
+	}
+	.wuoz-footer-ico {
+		width: 30px;
+		margin-right: 2em;
+		background-size: contain;
+	}
+	.mkidn-footer-ico {
+		width: 60px;
+		margin-right: 2em;
+	}
+}
+#cc-authors-atts{
+	span.caps {
+			line-height: em-calc(30);
+			color: $dark-grey;
+			vertical-align: top;
+	}
+}
+#msg-reveal {
+	z-index: 100;
+	.srv-msg {
+		margin: 0;
+		text-align: center;
+	}
+	.srv-msg {
+		.oz-button {
+			border: 1px solid $dark-green;
+			color: $dark-green;
+			cursor: pointer;
+			margin: 0px em-calc(10);
+		}
+		.oz-button:hover {
+			color: $success-color;
+			border: 1px solid $success-color;
+		}
+		.conf-msg {
+			display: block;
+			text-align: center;
+		}
+		.button-group {
+			text-align: center;
+			margin-top: 1em;
+		}
+	}
+}
+section#filter-grey {
+	background-color: $filter-grey;
+	min-height: em-calc(100);
+	border-bottom: 1px solid white;
+	line-height: 5em;
+	vertical-align: middle;
+	padding-top: em-calc(18);
+	span.slabel {
+		color: $dark-green;
+		margin-right: 1em;
+	}
+	#recent-label {
+		select {
+			width: auto;
+			position: relative;
+		}
+		a {
+			margin-right: em-calc(10);
+			>span {
+				color: $dark-grey;
+				//margin: 0px em-calc(10);
+			}
+			>span.ico {
+				opacity: 0.6;
+			}
+
+			span.ar-sort {
+				@extend .ar-sort-ico;
+				width: 20px;
+				height: 20px;
+				background-position: 50% 0;
+			}
+			.doc-ico, .mon-ico {
+				background-position: 5px 4px;
+			}	
+		}
+		.large-4 {
+			a.ajax-on {
+				.doc-ico {
+					@extend .doc-ico;
+				}
+				.mon-ico {
+					@extend .mon-ico;
+				}	
+			
+			}
+			a {
+				.doc-ico {
+				@extend .doc-off-ico;
+				}
+				.mon-ico {
+				@extend .mon-off-ico;
+				}
+			}
+		}
+		a.ajax-on {
+			.doc-ico {
+				@extend .doc-ico;
+			}
+			.mon-ico {
+				@extend .mon-ico;
+			}
+			>span {
+				color: $active-filter;
+			}
+			>span.ico {
+				opacity: 1;
+			}
+		}
+		a.ajax-on[data-order="DESC"]{
+			.ar-sort {
+				@extend .down-active;
+			}
+		}
+		a.ajax-on[data-order="ASC"]{
+			.ar-sort {
+				@extend .up-active;
+			}
+		}
+	}
+
+  	.document-types, .monument-types {
+	  display: none;
+	}
+  .category-info p {
+	margin-top: 20px;
+	font-size: 12px;
+	text-transform: uppercase;
+  }
+}
+
+#search-results {
+	background-color: $smoke;
+	padding-top: em-calc(40);
+	min-height: 340px;
+	position: relative;
+	ul.pagination {
+		margin-bottom: 0;
+		a, span {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+		}
+		a {
+			text-align:center;
+			padding: 0;
+		}
+		span.current {
+			text-align:center;
+			background-color: $dark-green;
+			color: $smoke;
+			
+		}
+		.next, .prev {
+			color: $dark-green;
+		}
+	}
+	padding-bottom: em-calc(40);
+	.preloader {
+		top: 45%;
+	}
+}
+.preloader * {
+		display: none;
+		overflow: hidden;
+		visibility: none;
+}
+body.page{ 
+	h1 {
+		font-size: 12px;
+		@extend .caps;
+		color: $primary-color;
+		margin-top: em-calc(20);
+		img {
+			height: 18px;
+			width: auto;
+			margin-right: 5px;
+		}
+	}
+
+	.page-content {
+		font-size: 14px;
+	}
+}

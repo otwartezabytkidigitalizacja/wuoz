@@ -1,0 +1,475 @@
+// My favourites
+#my-favs {
+	@include transition-two(right ease-out 1s,z-index ease-out 1s );
+	position: fixed;
+	left: auto;
+	top: auto;
+	right: -318px;
+	width: 360px;
+	z-index: 89;
+	#ver-bar {
+		width: 44px;
+		height: em-calc(230);
+		border: 1px solid $dark-green;
+		border-right: none;
+		background-color: $smoke;
+		position: absolute;
+		cursor: pointer;
+		.ar.ico {
+			@extend .ar-prev;
+			width: 43px;
+			background-color: #517286;
+			height: 43px;
+			background-position: 29% 50%;
+			background-repeat: no-repeat;
+		}
+		.fav-star.ico {
+			@extend .fav-star-ico;
+			width: 43px;
+			height: 43px;
+			position: absolute;
+			bottom: 3px;
+			top: auto;
+			left: 0px;
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		p.rotate {
+			@include rotate(90);
+			@extend .caps;
+			white-space: nowrap;
+			padding-left: em-calc(30);
+
+		}
+
+	}
+	#list-cnt {
+		display: block;
+		width: 100%;
+		background-color: #fff;
+		margin-left: 44px;
+		border: 1px solid $dark-green;
+		min-height: 230px;
+		padding-bottom: em-calc(50);
+		ul {
+			width: 100%;
+			padding: 2.5em;
+			li{
+				border-bottom: 1px solid $light-grey;
+				min-height: em-calc(45);
+				padding-top: em-calc(5);
+				position: relative;
+				.ico.remove-fav {
+					@extend .ex-ico;
+					width: 30px;
+					height: 30px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					background-size: 22px;
+					background-repeat: no-repeat;
+					background-position: -3px 3px;
+					cursor: pointer;
+				}
+				a {
+					padding-left: em-calc(30);
+					margin-left: em-calc(50);
+					display: inline-block;
+				}
+				.ico.document{
+						@extend .color-doc-ico;
+						width: 16px;
+						height: 16px;
+				}
+				.ico.monument{
+						@extend .color-mon-ico;
+						width: 16px;
+						height: 16px;
+				}
+				.ico.document, .ico.monument {
+					position: absolute;
+					left: em-calc(50);
+					top: auto;
+				}
+			}
+			li.ui-draggable-dragging {
+				position: fixed !important;
+				padding: 1em 2em;
+				background-color: rgba(255,255,255,0.8);
+				.ico.remove-fav {
+					top: 6px;
+					left: 13px;
+				}
+			}
+		}
+		.scrollable {
+			max-height: em-calc(500);
+			overflow: hidden;
+		}
+		.scrollable ul{
+			@include transition(height ease-out 0.5s);
+			list-style: none;
+			padding-top: 2em;
+		}
+		.scrollable.scroll-active {
+			overflow-y: scroll;
+		}
+		.scrollable.preloader {
+			overflow: hidden;
+			left: 64%;
+			top: 41%;
+		}
+		.srv-msg {
+			line-height: 2em;
+			margin-top: 2em;
+			text-align: left;
+			padding: 0 2.5em;
+			color: $primary-color;
+			.fav-star-ico {
+				width: 2em;
+				height: 2em;
+				vertical-align: middle;
+				background-position: -2px -5px;
+			}
+		}
+
+	}
+	.button-group {
+		border-top: 1px solid $dark-green;
+		height: em-calc(50);
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		a {
+			@extend .caps;
+			width: 50%;
+			line-height: em-calc(40);
+			font-size: 1.1em;
+			text-align: center;
+			span {
+				padding-left: 1.5em;
+				padding-right: 3em;
+			}
+		}
+		a.my-cats {
+			@extend .mycats-ico;
+			background-position: 90% 50%;
+			background-repeat: no-repeat;
+		}
+		a.del-favs {
+			@extend .del-all-ico;
+			background-position: 90% 50%;
+			background-repeat: no-repeat;
+		}
+	}
+}
+#my-favs.bar-opened {
+	@include transition-two(right ease-out 1s,z-index ease-out 1s );
+	right: 43px;
+	z-index: 99;
+	#ver-bar {
+		.ar.ico {
+			@extend .ar-next;
+			background-position: 62% 50%;
+		}
+	}
+}
+body.logged-in .objects-cnt {
+	>div h4.label {
+		span.title-text{
+			padding-right: em-calc(20);
+		}
+	}
+}
+.single-thumb {
+	.fav-star-ico {
+		@include transition(opacity ease-in-out 0.5s);
+		position: absolute;
+		top: 7px;
+		right: 8px;
+		width: 20px;
+		height: 20px;
+		background-position: -6px -4px;
+		opacity: 0.7;
+	}
+	.fav-star-ico:hover {
+		@include transition(opacity ease-in-out 0.5s);
+		@extend .alreadyfav;
+		opacity: 0.8;
+	}
+	.fav-star-ico.alreadyfav {
+		@extend .alreadyfav;
+		opacity: 1;
+	}
+	.fav-star-ico.alreadyfav:hover {
+		@include transition(opacity ease-in-out 0.5s);
+		opacity: 0.4;
+	}
+	.rem-from-fol {
+		position: absolute;
+		width: 35px;
+		height: 38px;
+		background-color: $dark-green;
+		bottom: 0;
+		left: 0;
+		top: auto;
+		display: none;
+		z-index: 1;
+		@extend .trash-ico;
+		background-position: 45% 50%;
+		cursor: pointer;
+	}
+}
+.single-thumb:hover {
+	.rem-from-fol {
+		display: block;
+		@include transition(all ease-in-out 0.5s);
+	}
+	.rem-from-fol:hover {
+		background-color: $success-color;
+		@include transition(all ease-in-out 0.5s);
+	}
+}
+
+// My Folders
+#my-folders-wrapper {
+	background-color: $smoke;
+	padding-bottom: 4em;
+}
+#my-fol-header, #my-fol-title {
+	font-size: 1.3em;
+	color: $dark-green;
+	margin-top: 2em;
+	@extend .caps;
+	span{
+		line-height: 1em;
+		font-size: 1.3em;
+		vertical-align: middle;
+		height: 30px;
+	}
+	span.ico {
+		width: 30px;
+		height: 30px;
+		background-position: 50% 2px;
+	}
+}
+#my-fol-title {
+	@extend .low-case;
+	margin-bottom: 2em;
+	margin-top: 0;
+}
+#my-cats-cnt{
+	.sf-cnt {
+		padding-left: 0;
+		padding-right: 2.5em;
+		margin-top: 2em;
+		cursor: pointer;
+		.top-border {
+			height: 12px;
+			border-right: 1px solid $dark-green;
+			border-left: 1px solid $dark-green;
+			border-top:  2px solid $dark-green;
+			border-bottom: none;
+			border-top-width: 2px;
+			display: block;
+			position: relative;
+			@include border-radius-folder-top($global_radius);
+			width: 80%;
+			margin-left: 20%;
+			z-index: 1;
+			position: relative;
+			background-color: white;
+			@include transition(all ease-in-out 0.5s);
+		}
+	}
+	.single-folder {
+		border: 1px solid $dark-green;
+		border-top-width: 2px;
+		display: block;
+		position: relative;
+		margin-bottom: 2.5em;
+		@include border-radius-folder($global_radius);
+		z-index: 2;
+		position: relative;
+		background-color: white;
+		margin-bottom: 0.5em;
+		@include transition(all ease-in-out 0.5s);
+		.rem-folder {
+			display: none;
+			@include transition(all ease-in-out 0.5s);
+			@extend .ex-ico;
+			width: 35px;
+			height: 38px;
+			cursor: pointer;
+			position: absolute;
+			top: auto;
+			left:0;
+			bottom: 0;
+			background-color: $dark-green;
+			@extend .trash-ico;
+			background-position: 45% 50%;
+			cursor: pointer;
+			@include transition(all ease-in-out 0.5s);
+		}
+		img {
+			margin: 0px auto;
+			display: block;
+			width: 100% !important;
+		}
+
+	}
+	.sf-cnt:hover {
+		.single-folder, .top-border {
+			border-color: $success-color;
+			@include transition(all ease-in-out 0.5s);
+		}
+	}
+	.add-cnt.sf-cnt {
+		padding-left: 0em;
+		padding-right: 1em;
+	}
+	.add-cnt.sf-cnt .single-folder{
+			border-top-width: 1px;
+			@include border-radius(0);
+	}
+	.add-cnt.sf-cnt .single-folder:hover {
+			border-color: $success-color;
+	}
+	.single-folder:hover {
+		.rem-folder {
+			display: block;
+			@include transition(all ease-in-out 0.5s);
+		}
+		.rem-folder:hover {
+			background-color: $success-color;
+			@include transition(all ease-in-out 0.5s);
+		}
+	}
+	h6.label {
+		font-size: 1.1em;
+	}
+	.sf-cnt.browsed, .sf-cnt.about-to-drop {
+		.single-folder, .top-border {
+			@include box-shadow(5px, 5px, 10px, 0, $light-grey);
+		}
+	}
+	.sf-cnt.about-to-drop .top-border, .sf-cnt.about-to-drop .single-folder {
+			border-color: $success-color;
+	}
+	.separator {
+		min-height: 120px;
+	}
+
+}
+#search-results.user-folder {
+	background-color: $filter-grey;
+	min-width: 396px;
+	@media (max-width: 1200px) {
+		min-width: 340px;
+	}
+	.single-thumb.ui-draggable-dragging {
+			position: fixed !important;
+			z-index: 99;
+			opacity: 0.4;
+	}
+
+}
+#search-results.user-folder.closed {
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	height: 0;
+
+}
+#search-results.drop-it{
+	@include box-shadow-inset(0px, 2px, 20px, 5px, rgba(0, 0, 0, 0.3));
+}
+
+#addfolder-reveal {
+	.large-6:nth-child(even) {
+		margin-left: 1%;
+	}
+	.large-6:nth-child(odd) {
+		margin-right: 1%;
+	}
+	.large-6 {
+	width: 48%;
+	//padding: 0.1em;
+	border: 4px solid $filter-grey;
+	margin-bottom: 2%;
+	position: relative;
+		img {
+			cursor: pointer;
+			width: 100% !important;
+			display: block;
+			margin: 0px auto;
+			float: none;
+		}
+		.fav-ico {
+			background-color: white;
+		}
+	@include transition(border ease-in-out 0.5s)
+	}
+	.large-6:hover {
+		border: 4px solid $success-color;
+		@include transition(border ease-in-out 0.5s)
+	}
+	.cover-cnt {
+	margin-bottom: 2em;
+	.ico {
+		display: none;
+	}
+	.cover-sel{
+		border: 4px solid $success-color;
+		.ico {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: auto;
+			width: 35px;
+			height: 38px;
+			line-height: 38px;
+			background-color: $success-color;
+			display: block;
+			>span {
+				width: 100%;
+				height: 100%;
+				display: block;
+				@extend .alreadyfav-white;
+				background-position: 50% 2px;
+
+			}
+		}
+	}
+	}
+}
+#settings-reveal {
+	padding: 2em;
+	#user-settings {
+		margin: 0;
+		padding: 0;
+	}
+	@media (min-width: 1200px) and (max-width: 1800px) {
+		width: 50%;
+		margin-left: -25%;
+	}
+	@media (min-width: 768px) and (max-width: 1199px) {
+		width: 80%;
+		margin-left: -40%;
+	}
+}
+
+.srv-msg.large {
+	padding: 0;
+	line-height: 1em;
+	margin-bottom: 0em;
+	display: none;
+	text-align: center;
+}
+body.page-template-my_folders-php .srv-msg.large {
+	display: block;
+}
+
+body.admin-bar {
+  top: -34px;
+}
